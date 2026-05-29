@@ -1,0 +1,4 @@
+[build]
+  base = "hantavirus-web"
+  command = "npm run build"
+  publish = "dist"

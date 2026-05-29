@@ -1,36 +1,29 @@
+---
+const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfcyGrY71QFoew6Ud9R_CRrRif1Mhh0Aeo5LBlKYCcm4zO6sA/viewform";
+const embedUrl = `${formUrl}?embedded=true`;
+---
+
 <section class="section reveal" id="contact">
   <div class="container">
     <div class="form-layout">
       <div>
-        <h2 class="section-title reveal" data-en="Questions or comments" data-es="Preguntas o comentarios">Questions or comments</h2>
-        <p class="form-copy reveal" data-en="Use this form to leave feedback, questions, or notes for the academic project." data-es="Usa este formulario para dejar comentarios, preguntas o notas para el proyecto académico.">
-          Use this form to leave feedback, questions, or notes for the academic project.
+        <h2 class="section-title reveal" data-en="Survey form" data-es="Formulario de encuesta">Survey form</h2>
+        <p class="form-copy reveal" data-en="Please answer this Google Form to help complete the academic project." data-es="Contesta este formulario de Google para ayudar a completar el proyecto académico.">
+          Please answer this Google Form to help complete the academic project.
         </p>
+        <a class="form-link reveal" href={formUrl} target="_blank" rel="noopener noreferrer" data-en="Open form in a new tab" data-es="Abrir formulario en otra pestaña">
+          Open form in a new tab
+        </a>
       </div>
-      <form class="contact-form card reveal" name="hantavirus-feedback" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="hantavirus-feedback" />
-        <label>
-          <span data-en="Name" data-es="Nombre">Name</span>
-          <input name="name" type="text" required data-placeholder-en="Your name" data-placeholder-es="Tu nombre" placeholder="Your name" />
-        </label>
-        <label>
-          <span data-en="Email" data-es="Correo">Email</span>
-          <input name="email" type="email" required data-placeholder-en="you@example.com" data-placeholder-es="tu@ejemplo.com" placeholder="you@example.com" />
-        </label>
-        <label>
-          <span data-en="Topic" data-es="Tema">Topic</span>
-          <select name="topic" required>
-            <option value="question" data-en="Question" data-es="Pregunta">Question</option>
-            <option value="correction" data-en="Correction" data-es="Corrección">Correction</option>
-            <option value="source" data-en="Source suggestion" data-es="Sugerencia de fuente">Source suggestion</option>
-          </select>
-        </label>
-        <label>
-          <span data-en="Message" data-es="Mensaje">Message</span>
-          <textarea name="message" rows="5" required data-placeholder-en="Write your message..." data-placeholder-es="Escribe tu mensaje..." placeholder="Write your message..."></textarea>
-        </label>
-        <button type="submit" data-en="Send message" data-es="Enviar mensaje">Send message</button>
-      </form>
+      <div class="form-frame card reveal">
+        <iframe
+          src={embedUrl}
+          title="Hantavirus survey Google Form"
+          loading="lazy"
+        >
+          Loading...
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -38,60 +31,49 @@
 <style>
   .form-layout {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1.2fr);
+    grid-template-columns: minmax(0, 0.75fr) minmax(320px, 1.25fr);
     gap: 2rem;
     align-items: start;
   }
   .form-copy {
     color: var(--color-text-muted);
     max-width: 32rem;
+    margin-bottom: 1rem;
   }
-  .contact-form {
-    display: grid;
-    gap: 1rem;
-  }
-  .contact-form label {
-    display: grid;
-    gap: 0.4rem;
-    color: var(--color-text);
-    font-weight: 700;
-  }
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    width: 100%;
-    border: 1px solid var(--color-border);
+  .form-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
-    padding: 0.85rem 0.95rem;
-    background: var(--color-surface-alt);
-    color: var(--color-text);
-    font: inherit;
-  }
-  .contact-form textarea { resize: vertical; min-height: 130px; }
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-  }
-  .contact-form button {
-    justify-self: start;
-    border: 0;
-    border-radius: 8px;
-    padding: 0.85rem 1.2rem;
+    padding: 0.85rem 1.1rem;
     background: var(--color-accent);
     color: #fff;
-    font: inherit;
     font-weight: 800;
-    cursor: pointer;
-    transition: transform var(--transition), background var(--transition);
   }
-  .contact-form button:hover {
-    transform: translateY(-2px);
+  .form-link:hover {
+    color: #fff;
+    text-decoration: none;
     background: var(--color-accent-hover);
+  }
+  .form-frame {
+    padding: 0;
+    overflow: hidden;
+    min-height: 680px;
+  }
+  .form-frame iframe {
+    display: block;
+    width: 100%;
+    height: 680px;
+    border: 0;
+    background: #fff;
   }
   @media (max-width: 780px) {
     .form-layout { grid-template-columns: 1fr; }
-    .contact-form button { width: 100%; }
+    .form-link { width: 100%; }
+    .form-frame,
+    .form-frame iframe {
+      min-height: 720px;
+      height: 720px;
+    }
   }
 </style>

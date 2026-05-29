@@ -18,8 +18,8 @@ export const translations = {
     hero: {
       title: "Hantavirus at Sea: The MV Hondius Cruise Ship Outbreak",
       subtitle: "Informative research about the hantavirus outbreak reported on the MV Hondius cruise ship during 2026",
-      institution: "College of Scientific and Technological Studies of the State of Aguascalientes",
-      date: "May 2026"
+      institution: "CECYTEA de Calvillo",
+      date: ""
     },
     sections: {
       introduction: {
@@ -148,8 +148,8 @@ export const translations = {
     hero: {
       title: "Hantavirus en el Mar: El Brote del Crucero MV Hondius",
       subtitle: "Investigación informativa sobre el brote de hantavirus reportado en el crucero MV Hondius durante 2026",
-      institution: "Colegio de Estudios Científicos y Tecnológicos del Estado de Aguascalientes",
-      date: "Mayo 2026"
+      institution: "CECYTEA de Calvillo",
+      date: ""
     },
     sections: {
       introduction: {

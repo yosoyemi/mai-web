@@ -4,11 +4,12 @@ const en = translations.en.data;
 const es = translations.es.data;
 ---
 
-<section class="section" id="data">
+<section class="section reveal" id="data">
   <div class="container">
-    <h2 class="section-title" data-en={en.title} data-es={es.title}>{en.title}</h2>
-    <div class="table-wrapper card">
+    <h2 class="section-title reveal" data-en={en.title} data-es={es.title}>{en.title}</h2>
+    <div class="table-wrapper card reveal" role="region" aria-labelledby="data-table-title">
       <table id="dataTable">
+        <caption id="data-table-title" data-en={en.title} data-es={es.title}>{en.title}</caption>
         <thead>
           <tr>
             <th data-en={en.headers[0]} data-es={es.headers[0]}>{en.headers[0]}</th>
@@ -29,10 +30,17 @@ const es = translations.es.data;
 </section>
 
 <style>
-  .table-wrapper { overflow-x: auto; padding: 1rem; }
+  .table-wrapper { overflow-x: auto; padding: 0; }
   table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 560px;
+  }
+  caption {
+    text-align: left;
+    padding: 1rem 1rem 0;
+    font-weight: 700;
+    color: var(--color-text);
   }
   th, td {
     padding: 1rem;
@@ -43,6 +51,8 @@ const es = translations.es.data;
     background: var(--color-surface-alt);
     font-weight: 700;
     color: var(--color-primary);
+    position: sticky;
+    top: 0;
   }
   [data-theme="dark"] th { color: var(--color-accent); }
   tr:hover td { background: var(--color-surface-alt); }

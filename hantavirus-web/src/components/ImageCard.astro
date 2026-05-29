@@ -9,12 +9,49 @@ const es = translations.es.images;
     <h2 class="section-title reveal" data-en={en.title} data-es={es.title}>{en.title}</h2>
     <div class="image-grid">
       <figure class="card image-card reveal">
-        <img src="https://ayacucho.gob.ar/sites/default/files/flyer-hanta-2019_1.jpg" alt="Hantavirus infographic" loading="lazy" />
+        <img
+          src="https://cdn.who.int/media/images/default-source/products/disease-outbreak-news/hantavirus-outbreak-epi-curvef3430263-0740-4ff3-95eb-5a3e950a0092.png?sfvrsn=80f4e86b_3"
+          alt="WHO epidemiological curve for M/V Hondius hantavirus outbreak"
+          loading="lazy"
+        />
+        <span class="image-source">WHO</span>
         <figcaption data-en={en.caption1} data-es={es.caption1}>{en.caption1}</figcaption>
       </figure>
       <figure class="card image-card reveal" style="transition-delay: 0.1s">
-        <img src="https://www.generalrodriguez.gob.ar/noticias/wp-content/uploads/2019/01/50488631_1279554495532038_3515354994322702336_n.jpg" alt="Hantavirus symptoms" loading="lazy" />
+        <img
+          src="https://cdn.who.int/media/images/default-source/products/disease-outbreak-news/hantavrius-contacts.png?sfvrsn=d4f49938_3"
+          alt="WHO contact tracing table for M/V Hondius hantavirus outbreak"
+          loading="lazy"
+        />
+        <span class="image-source">WHO</span>
         <figcaption data-en={en.caption2} data-es={es.caption2}>{en.caption2}</figcaption>
+      </figure>
+      <figure class="card image-card reveal" style="transition-delay: 0.2s">
+        <img
+          src="https://www.cdc.gov/hantavirus/images/outbreaks/seoul-virus/women-cleaners.jpg"
+          alt="CDC image of cleaning products for hantavirus prevention"
+          loading="lazy"
+        />
+        <span class="image-source">CDC</span>
+        <figcaption data-en={en.caption3} data-es={es.caption3}>{en.caption3}</figcaption>
+      </figure>
+      <figure class="card image-card reveal" style="transition-delay: 0.3s">
+        <img
+          src="https://ayacucho.gob.ar/sites/default/files/flyer-hanta-2019_1.jpg"
+          alt="Hantavirus prevention educational infographic"
+          loading="lazy"
+        />
+        <span class="image-source" data-en="Related" data-es="Relacionada">Related</span>
+        <figcaption data-en={en.caption4} data-es={es.caption4}>{en.caption4}</figcaption>
+      </figure>
+      <figure class="card image-card reveal" style="transition-delay: 0.4s">
+        <img
+          src="https://www.generalrodriguez.gob.ar/noticias/wp-content/uploads/2019/01/50488631_1279554495532038_3515354994322702336_n.jpg"
+          alt="Hantavirus symptoms educational image"
+          loading="lazy"
+        />
+        <span class="image-source" data-en="Related" data-es="Relacionada">Related</span>
+        <figcaption data-en={en.caption5} data-es={es.caption5}>{en.caption5}</figcaption>
       </figure>
     </div>
   </div>
@@ -23,20 +60,62 @@ const es = translations.es.images;
 <style>
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1.5rem;
   }
-  .image-card { padding: 1rem; text-align: center; }
+  .image-card {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+  }
   .image-card img {
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: #fff;
     width: 100%;
+    height: 220px;
     object-fit: cover;
-    max-height: 300px;
+  }
+  .image-card:nth-child(1),
+  .image-card:nth-child(2) {
+    grid-column: span 3;
+  }
+  .image-card:nth-child(n + 3) {
+    grid-column: span 2;
+  }
+  .image-card:nth-child(1) img,
+  .image-card:nth-child(2) img {
+    object-fit: contain;
+    padding: 0.75rem;
+  }
+  .image-source {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.55rem;
+    background: rgba(2, 6, 23, 0.82);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
   }
   .image-card figcaption {
-    font-size: 0.85rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
     color: var(--color-text-muted);
-    font-style: italic;
+  }
+  @media (max-width: 900px) {
+    .image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .image-card:nth-child(1),
+    .image-card:nth-child(2),
+    .image-card:nth-child(n + 3) {
+      grid-column: span 1;
+    }
+  }
+  @media (max-width: 640px) {
+    .image-grid { grid-template-columns: 1fr; }
+    .image-card img { height: auto; max-height: 280px; }
   }
 </style>

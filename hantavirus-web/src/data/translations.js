@@ -16,117 +16,129 @@ export const translations = {
       references: "References"
     },
     hero: {
-      title: "Hantavirus at Sea: The MV Hondius Cruise Ship Outbreak",
-      subtitle: "Informative research about the hantavirus outbreak reported on the MV Hondius cruise ship during 2026",
+      title: "Hantavirus at Sea: The M/V Hondius Outbreak",
+      subtitle: "Evidence-based overview of the 2026 Andes hantavirus outbreak linked to cruise ship travel, using WHO and CDC updates.",
       institution: "CECYTEA de Calvillo",
-      date: ""
+      date: "Updated: May 2026"
     },
     sections: {
       introduction: {
         title: "Introduction",
-        content: "Hantavirus is a family of viruses mainly transmitted by infected rodents. This virus can cause serious illnesses in humans, especially Hantavirus Pulmonary Syndrome, a severe respiratory disease that can become life-threatening. In May 2026, an outbreak related to the MV Hondius cruise ship was reported, generating international concern due to the severity of some reported cases."
+        content: "Hantaviruses are a family of viruses that can cause severe disease in humans. They are mainly associated with exposure to infected rodents and their urine, droppings, or saliva. In the Americas, some hantaviruses can cause Hantavirus Pulmonary Syndrome (HPS), a serious respiratory illness.\n\nIn 2026, the World Health Organization reported an Andes virus outbreak linked to travel on the Netherlands-flagged cruise ship M/V Hondius. The event became important because it involved severe respiratory illness, deaths, international travel, contact tracing across many countries, and evidence of human-to-human transmission on board."
       },
       what: {
         title: "What is Hantavirus?",
-        content: "Hantavirus belongs to a group of zoonotic viruses mainly transmitted by wild rodents. Infection occurs when people inhale particles contaminated with urine, saliva, or feces from infected rodents. Depending on the type of hantavirus, the disease may primarily affect the lungs or the kidneys."
+        content: "Hantaviruses are zoonotic viruses, meaning they usually move from animals to humans. People are most often infected when contaminated particles from rodent urine, feces, or saliva become airborne and are inhaled. Infection can also occur when contaminated material reaches broken skin, the eyes, nose, or mouth.\n\nHantaviruses are not all the same. In the Western Hemisphere, several species are linked to HPS, which affects the lungs. In Europe and Asia, other hantaviruses are more commonly linked to hemorrhagic fever with renal syndrome, which affects the kidneys."
       },
       background: {
-        title: "Background",
-        content: "Hantavirus is considered a zoonotic disease, meaning it can be transmitted from animals to humans. Rodents are the main natural reservoir of the virus and can spread it through urine, saliva, and feces.\n\nSince the 1990s, major outbreaks have been recorded in different parts of the American continent. Some types of hantavirus mainly affect the lungs, causing Hantavirus Pulmonary Syndrome, a disease that can be fatal if it is not detected and treated quickly."
+        title: "Scientific Background",
+        content: "The Andes virus (ANDV) is a hantavirus reported mainly in southern South America, especially Argentina and Chile. Unlike most hantaviruses, Andes virus is known to have limited person-to-person transmission, usually after close and prolonged contact.\n\nPublic health concern comes from three facts: the illness can progress quickly after early flu-like symptoms, severe cases may need intensive care, and there is no specific antiviral treatment. Prevention, early recognition, isolation of suspected cases, and contact monitoring are therefore central to outbreak control."
       },
       situation: {
-        title: "Situation on the MV Hondius Cruise Ship",
-        content: "The World Health Organization reported in May 2026 a group of cases associated with the MV Hondius cruise ship. The ship carried approximately 147 passengers and crew members. Investigations indicated that the virus involved was the Andes virus, a type of hantavirus associated with severe respiratory illness.\n\nInternational health authorities conducted epidemiological follow-up to identify contacts and prevent further infections. Some patients presented severe symptoms related to respiratory distress."
+        title: "Situation on the M/V Hondius",
+        content: "WHO received notification on May 2, 2026 of a cluster of severe acute respiratory illness aboard the M/V Hondius, including two deaths and one critically ill passenger. By May 27, 2026, WHO reported 13 cases linked to the ship, including three deaths. Eleven cases were laboratory-confirmed as Andes virus infection and two were probable cases.\n\nWHO reported that all confirmed cases were among people who travelled on board the ship. Current evidence supports subsequent human-to-human transmission on board, while the exact contribution of contact, contaminated surfaces, respiratory particles, and possible airborne transmission remained under investigation."
       },
       transmission: {
         title: "Transmission",
-        content: "Hantavirus transmission mainly occurs by inhaling particles contaminated with feces, saliva, or urine from infected rodents. Infection can also occur through direct contact with contaminated surfaces. In the specific case of the Andes virus, person-to-person transmission has been documented in rare circumstances."
+        content: "For most hantaviruses, the main route is exposure to infected rodents or contaminated environments. Risk increases when rodent droppings, urine, or nesting materials are disturbed during cleaning, storage, camping, farm work, or work in enclosed spaces.\n\nFor Andes virus, limited person-to-person transmission has been documented. WHO describes this as most often related to close and prolonged exposure, not as a pattern similar to highly transmissible airborne infections such as measles. For people not exposed on the ship or through close contact with a confirmed case, WHO and CDC describe the general public risk as low."
       },
       symptoms: {
         title: "Symptoms",
-        content: "Initial symptoms include fever, fatigue, muscle pain, headache, nausea, and chills. As the disease progresses, severe respiratory difficulties may appear due to fluid accumulation in the lungs."
+        content: "HPS symptoms usually begin 1 to 8 weeks after exposure. Early symptoms can include fever, fatigue, muscle aches, headache, dizziness, chills, nausea, vomiting, diarrhea, or abdominal pain.\n\nFour to 10 days after the initial phase, severe symptoms can appear: coughing, shortness of breath, chest tightness, and fluid buildup in the lungs. CDC notes that HPS can be deadly, so anyone with compatible symptoms and possible rodent or outbreak exposure should seek medical care immediately."
       },
       diagnosis: {
         title: "Diagnosis",
-        content: "Hantavirus diagnosis must be performed by healthcare professionals through clinical evaluation and laboratory testing. It is important to consider a history of exposure to rodents or contaminated spaces.\n\nSince initial symptoms can be confused with other respiratory diseases, early diagnosis is essential to avoid serious complications."
+        content: "Diagnosis requires clinical evaluation and laboratory testing. Early hantavirus symptoms can look like influenza or other respiratory infections, so exposure history is essential. Patients should tell healthcare providers if they had contact with rodents, cleaned contaminated spaces, travelled in affected areas, or were linked to a monitored outbreak.\n\nCDC notes that testing early in illness can be difficult; if the first test is performed before the virus can be detected, repeat testing may be needed."
       },
       treatment: {
         title: "Treatment",
-        content: "Currently, there is no specific treatment to eliminate hantavirus. Medical treatment mainly consists of supportive care, respiratory monitoring, oxygen, and specialized hospital care in severe cases."
+        content: "There is no specific antiviral treatment that eliminates hantavirus infection. Treatment is supportive and depends on severity. Mild cases may require close monitoring, hydration, and symptom control, while severe HPS can require oxygen, intubation, intensive care, and advanced respiratory support.\n\nBecause severe illness can worsen quickly, early transfer to a hospital with emergency and intensive-care capacity improves the chance of survival."
       },
       prevention: {
         title: "Prevention",
-        content: "Preventive measures include avoiding contact with rodents, keeping enclosed spaces clean, using disinfectants during cleaning, and storing food in sealed containers. It is also recommended to properly ventilate spaces that have been closed for long periods."
+        content: "The most effective prevention is avoiding exposure to rodents and contaminated dust. CDC recommends controlling rodent infestations, sealing holes and gaps, storing food securely, removing materials that attract rodents, and using safe wet-cleaning methods rather than dry sweeping or vacuuming contaminated droppings.\n\nWhen cleaning potentially contaminated areas, ventilate first, wear appropriate protection, wet the material with disinfectant, avoid stirring up dust, and dispose of waste safely."
       },
       cruisePrevention: {
-        title: "Prevention Measures on Cruise Ships",
+        title: "Prevention Measures on Ships and Shared Spaces",
         items: [
-          "Inspect storage and kitchen areas.",
-          "Avoid garbage accumulation.",
-          "Control the presence of rodents.",
-          "Constantly disinfect surfaces.",
-          "Ventilate enclosed spaces before cleaning them.",
-          "Use protective equipment during cleaning.",
-          "Report respiratory symptoms immediately."
+          "Inspect food storage, waste handling, cabins, kitchens, and cargo areas for rodent activity.",
+          "Seal entry points and remove food or water sources that attract rodents.",
+          "Use wet disinfection methods for droppings, nesting material, and contaminated surfaces.",
+          "Avoid dry sweeping or vacuuming areas with possible rodent contamination.",
+          "Isolate suspected cases and provide rapid medical assessment for respiratory symptoms.",
+          "Identify close contacts and follow public health monitoring guidance.",
+          "Communicate risk clearly without overstating danger to the general public."
         ]
       },
       conclusion: {
         title: "Conclusion",
-        content: "The hantavirus outbreak related to the MV Hondius cruise ship demonstrated the importance of international epidemiological surveillance and preventive measures against zoonotic diseases. Early detection and appropriate medical follow-up are essential to reduce the risk of severe complications."
+        content: "The M/V Hondius outbreak shows why zoonotic diseases require fast reporting, international coordination, laboratory confirmation, and careful contact tracing. The key public health message is balanced: hantavirus can be severe and requires urgent medical attention, but risk can be reduced through rodent control, safe cleaning, early detection, and evidence-based monitoring."
       }
     },
     timeline: {
       title: "Outbreak Timeline",
       events: [
-        { date: "April 1, 2026", text: "The MV Hondius cruise ship began its journey." },
-        { date: "May 2, 2026", text: "The WHO was notified about suspected cases." },
-        { date: "May 4, 2026", text: "Severe cases related to hantavirus were reported." },
-        { date: "May 6, 2026", text: "The Andes virus was identified as the cause of the outbreak." },
-        { date: "May 2026", text: "Epidemiological investigations and medical follow-up were conducted." }
+        { date: "April 2026", text: "The M/V Hondius voyage included passengers and crew later linked to a cluster of severe respiratory illness." },
+        { date: "May 2, 2026", text: "WHO was notified of severe acute respiratory illness aboard the ship, including deaths and a critically ill passenger." },
+        { date: "May 8, 2026", text: "CDC reported that the U.S. government was monitoring and responding to the outbreak linked to the M/V Hondius." },
+        { date: "May 17, 2026", text: "WHO published updated guidance for managing contacts of Andes virus cases linked to the ship." },
+        { date: "May 27, 2026", text: "WHO reported 13 cases, including three deaths; 11 were laboratory-confirmed Andes virus infections and two were probable cases." },
+        { date: "May 28, 2026", text: "WHO assessed the risk to the global population as low while continuing international contact tracing and monitoring." }
       ]
     },
     data: {
       title: "Key Data",
-      headers: ["Data", "Information"],
+      headers: ["Data", "Verified information"],
+      highlights: [
+        { value: "13", label: "WHO-linked cases" },
+        { value: "3", label: "Deaths reported" },
+        { value: "600+", label: "Contacts traced" },
+        { value: "Low", label: "Global public risk" }
+      ],
       rows: [
-        ["Related location", "MV Hondius cruise ship"],
-        ["Identified virus", "Andes virus"],
-        ["People on board", "147 passengers and crew members"],
-        ["Initial cases", "7 reported cases"],
-        ["Health importance", "Risk of severe respiratory illness"]
+        ["Event", "Andes hantavirus outbreak linked to cruise ship travel on M/V Hondius"],
+        ["Latest WHO update used", "May 28, 2026 Disease Outbreak News"],
+        ["Cases reported by WHO", "13 cases as of May 27, 2026: 11 confirmed and 2 probable"],
+        ["Deaths reported by WHO", "3 deaths; case fatality ratio reported as 23%"],
+        ["Transmission finding", "Current evidence supports human-to-human transmission on board"],
+        ["Contacts traced", "More than 600 contacts across 32 countries, territories, and areas as of May 22, 2026"],
+        ["General public risk", "WHO assessed global population risk as low; CDC described U.S. public risk as extremely low"]
       ]
     },
     faq: {
       title: "Frequently Asked Questions",
       items: [
-        { q: "What is hantavirus?", a: "Hantavirus is a viral disease mainly transmitted by infected rodents. Infection occurs by inhaling particles contaminated with rodent saliva, urine, or feces. Depending on the type of virus, it may severely affect the lungs or the kidneys." },
-        { q: "Can hantavirus spread from person to person?", a: "Most types of hantavirus are not transmitted between people. However, the Andes virus has shown rare cases of person-to-person transmission through prolonged close contact." },
-        { q: "What are the first symptoms?", a: "The first symptoms usually resemble the flu and include fever, fatigue, muscle pain, headache, nausea, and chills. In severe cases, difficulty breathing may occur." },
-        { q: "How can it be prevented?", a: "To prevent hantavirus, it is important to avoid contact with rodents, keep enclosed spaces clean, properly store food, ventilate rooms before cleaning them, and use appropriate disinfectants." },
-        { q: "Is there treatment for hantavirus?", a: "Currently, there is no specific medication to eliminate hantavirus. Treatment mainly consists of supportive medical care, respiratory monitoring, and hospitalization in severe cases." },
-        { q: "Why was the MV Hondius outbreak important?", a: "The outbreak attracted international attention because it involved multiple severe cases on a cruise ship with passengers from different countries. Additionally, the identified virus was the Andes virus, associated with severe respiratory illness and possible person-to-person transmission." },
-        { q: "Who is at greater risk of infection?", a: "People at greater risk are those who work or stay in places where rodents are present, such as warehouses, barns, ships, abandoned enclosed spaces, or contaminated rural areas." }
+        { q: "Is hantavirus always transmitted between people?", a: "No. Most hantaviruses are linked to rodent exposure and do not commonly spread from person to person. Andes virus is the important exception, with limited transmission documented after close and prolonged contact." },
+        { q: "Why is Andes virus different?", a: "Andes virus is the only hantavirus currently known to spread person to person in HPS outbreaks. WHO notes that transmission can occur through close contact and is still being studied in the cruise-ship outbreak." },
+        { q: "How serious is HPS?", a: "HPS can become severe quickly after early symptoms. CDC reports that patients can develop coughing, shortness of breath, and fluid in the lungs; severe cases may require intensive care." },
+        { q: "Should the general public be worried?", a: "For people who were not on the ship and did not have close contact with a confirmed case, WHO assessed global population risk as low and CDC described risk to the American public as extremely low." },
+        { q: "What should someone do after possible exposure?", a: "They should follow local public health guidance, monitor symptoms, and seek medical care immediately if fever, muscle aches, cough, or shortness of breath appear. Exposure history should be mentioned to clinicians." },
+        { q: "What cleaning method is safer?", a: "CDC recommends avoiding dry sweeping or vacuuming rodent-contaminated areas. Ventilate, wet contaminated material with disinfectant, and clean using methods that reduce contaminated dust." },
+        { q: "Is there a cure?", a: "There is no specific antiviral cure. Treatment is supportive and may include oxygen, respiratory support, intensive care, and management of complications." }
       ]
     },
     images: {
-      title: "Related Images",
-      caption1: "Figure 1. Visual representation of hantavirus and its impact on human health.",
-      caption2: "Figure 2. Symptoms related to hantavirus."
+      title: "Real Data and Public Health Images",
+      caption1: "WHO epidemiological curve of Andes hantavirus cases linked to M/V Hondius, reported as of May 27, 2026.",
+      caption2: "WHO contact-tracing table showing regions reporting high-risk and low-risk contacts during the M/V Hondius response.",
+      caption3: "CDC prevention image: cleaning supplies are central to safe wet-cleaning methods after rodent contamination.",
+      caption4: "Related educational infographic about hantavirus prevention and public awareness.",
+      caption5: "Related visual guide showing common symptoms associated with hantavirus disease."
     },
     video: {
       title: "Explanatory Video",
-      caption: "Figure 3. Informative video about hantavirus."
+      caption: "Informative video about hantavirus prevention and health response."
     },
     references: {
       title: "References",
       items: [
-        "Centers for Disease Control and Prevention. (2026). 2026 multi-country hantavirus cluster linked to cruise ship. https://www.cdc.gov/han/php/notices/han00528.html",
-        "European Centre for Disease Prevention and Control. (2026). Hantavirus-associated cluster of illness on a cruise ship. https://www.ecdc.europa.eu/",
-        "World Health Organization. (2026). Hantavirus cluster linked to cruise ship travel, multi-country. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "World Health Organization. (2026). Hantavirus cluster linked to cruise ship travel, multi-country. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600"
+        "World Health Organization. (2026, May 28). Hantavirus outbreak linked to cruise ship travel, Multi-locations. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
+        "Centers for Disease Control and Prevention. (2026, May 8). CDC Provides Update on Hantavirus Outbreak Linked to M/V Hondius Cruise Ship. https://www.cdc.gov/media/releases/2026/2026-cdc-provides-update-on-hantavirus-outbreak-linked-to-m-v-hondius-cruise-ship.html",
+        "Centers for Disease Control and Prevention. (2024). About Hantavirus. https://www.cdc.gov/hantavirus/about/index.html",
+        "Centers for Disease Control and Prevention. (2024). Hantavirus Prevention. https://www.cdc.gov/hantavirus/prevention/index.html"
       ]
     },
-    footer: "Hantavirus at Sea — Academic Research Project © 2026",
+    footer: "Hantavirus at Sea - Academic Research Project 2026",
     theme: { light: "Light", dark: "Dark" }
   },
   es: {
@@ -134,7 +146,7 @@ export const translations = {
       intro: "Introducción",
       what: "¿Qué es?",
       timeline: "Cronología",
-      data: "Datos Clave",
+      data: "Datos clave",
       situation: "Situación",
       transmission: "Transmisión",
       symptoms: "Síntomas",
@@ -142,121 +154,133 @@ export const translations = {
       treatment: "Tratamiento",
       prevention: "Prevención",
       faq: "Preguntas",
-      media: "Medios",
+      media: "Imágenes",
       references: "Referencias"
     },
     hero: {
-      title: "Hantavirus en el Mar: El Brote del Crucero MV Hondius",
-      subtitle: "Investigación informativa sobre el brote de hantavirus reportado en el crucero MV Hondius durante 2026",
+      title: "Hantavirus en el mar: brote en el M/V Hondius",
+      subtitle: "Resumen basado en evidencia sobre el brote de hantavirus Andes de 2026 vinculado a un crucero, con información de la OMS y los CDC.",
       institution: "CECYTEA de Calvillo",
-      date: ""
+      date: "Actualizado: mayo de 2026"
     },
     sections: {
       introduction: {
         title: "Introducción",
-        content: "El hantavirus es una familia de virus transmitidos principalmente por roedores infectados. Este virus puede causar enfermedades graves en humanos, especialmente el Síndrome Pulmonar por Hantavirus, una enfermedad respiratoria severa que puede poner en riesgo la vida. En mayo de 2026, se reportó un brote relacionado con el crucero MV Hondius, generando preocupación internacional debido a la gravedad de algunos casos reportados."
+        content: "Los hantavirus son una familia de virus que pueden causar enfermedad grave en humanos. Se asocian principalmente con la exposición a roedores infectados y a su orina, excremento o saliva. En América, algunos hantavirus pueden causar Síndrome Pulmonar por Hantavirus (SPH), una enfermedad respiratoria severa.\n\nEn 2026, la Organización Mundial de la Salud reportó un brote de virus Andes vinculado al crucero neerlandés M/V Hondius. El evento fue relevante porque incluyó enfermedad respiratoria grave, fallecimientos, viajes internacionales, rastreo de contactos en muchos países y evidencia de transmisión de persona a persona a bordo."
       },
       what: {
-        title: "¿Qué es el Hantavirus?",
-        content: "El hantavirus pertenece a un grupo de virus zoonóticos transmitidos principalmente por roedores silvestres. La infección ocurre cuando las personas inhalan partículas contaminadas con orina, saliva o heces de roedores infectados. Dependiendo del tipo de hantavirus, la enfermedad puede afectar principalmente los pulmones o los riñones."
+        title: "¿Qué es el hantavirus?",
+        content: "Los hantavirus son virus zoonóticos, es decir, normalmente pasan de animales a humanos. La infección suele ocurrir cuando partículas contaminadas con orina, heces o saliva de roedores se suspenden en el aire y son inhaladas. También puede ocurrir si el material contaminado entra en contacto con heridas, ojos, nariz o boca.\n\nNo todos los hantavirus son iguales. En el hemisferio occidental, varias especies se asocian con SPH, que afecta los pulmones. En Europa y Asia, otros hantavirus se relacionan con fiebre hemorrágica con síndrome renal, que afecta principalmente los riñones."
       },
       background: {
-        title: "Antecedentes",
-        content: "El hantavirus es considerado una enfermedad zoonótica, lo que significa que puede transmitirse de animales a humanos. Los roedores son el principal reservorio natural del virus y pueden propagarlo a través de orina, saliva y heces.\n\nDesde la década de 1990, se han registrado brotes importantes en diferentes partes del continente americano. Algunos tipos de hantavirus afectan principalmente los pulmones, causando el Síndrome Pulmonar por Hantavirus, una enfermedad que puede ser fatal si no se detecta y trata rápidamente."
+        title: "Antecedentes científicos",
+        content: "El virus Andes (ANDV) es un hantavirus reportado principalmente en el sur de Sudamérica, especialmente en Argentina y Chile. A diferencia de la mayoría de los hantavirus, el virus Andes puede transmitirse de forma limitada entre personas, usualmente después de contacto cercano y prolongado.\n\nLa preocupación sanitaria se explica por tres puntos: la enfermedad puede avanzar rápido después de síntomas parecidos a gripe, los casos graves pueden requerir cuidados intensivos y no existe un antiviral específico. Por eso, la prevención, el reconocimiento temprano, el aislamiento de casos sospechosos y el seguimiento de contactos son esenciales."
       },
       situation: {
-        title: "Situación en el Crucero MV Hondius",
-        content: "La Organización Mundial de la Salud reportó en mayo de 2026 un grupo de casos asociados al crucero MV Hondius. El barco transportaba aproximadamente 147 pasajeros y miembros de la tripulación. Las investigaciones indicaron que el virus involucrado era el virus Andes, un tipo de hantavirus asociado con enfermedad respiratoria severa.\n\nLas autoridades sanitarias internacionales realizaron seguimiento epidemiológico para identificar contactos y prevenir más infecciones. Algunos pacientes presentaron síntomas severos relacionados con dificultad respiratoria."
+        title: "Situación en el M/V Hondius",
+        content: "La OMS recibió una notificación el 2 de mayo de 2026 sobre un grupo de casos de enfermedad respiratoria aguda grave a bordo del M/V Hondius, incluidos dos fallecimientos y un pasajero en estado crítico. Para el 27 de mayo de 2026, la OMS reportó 13 casos vinculados al barco, incluidos tres fallecimientos. Once casos fueron confirmados por laboratorio como infección por virus Andes y dos fueron clasificados como probables.\n\nLa OMS reportó que todos los casos confirmados correspondían a personas que viajaron a bordo del barco. La evidencia disponible apoya transmisión posterior de persona a persona en el barco, mientras la contribución exacta del contacto, superficies contaminadas, partículas respiratorias y posible transmisión aérea seguía bajo investigación."
       },
       transmission: {
         title: "Transmisión",
-        content: "La transmisión del hantavirus ocurre principalmente al inhalar partículas contaminadas con heces, saliva u orina de roedores infectados. La infección también puede ocurrir por contacto directo con superficies contaminadas. En el caso específico del virus Andes, se ha documentado transmisión de persona a persona en circunstancias raras."
+        content: "Para la mayoría de los hantavirus, la ruta principal es la exposición a roedores infectados o ambientes contaminados. El riesgo aumenta cuando se remueven excrementos, orina o material de nido durante limpieza, almacenamiento, campamentos, trabajo agrícola o labores en espacios cerrados.\n\nEn el caso del virus Andes, se ha documentado transmisión limitada de persona a persona. La OMS la describe principalmente como asociada con exposición cercana y prolongada, no con una dinámica parecida a infecciones aéreas muy transmisibles como el sarampión. Para quienes no estuvieron expuestos en el barco ni tuvieron contacto cercano con un caso confirmado, la OMS y los CDC describen el riesgo para la población general como bajo."
       },
       symptoms: {
         title: "Síntomas",
-        content: "Los síntomas iniciales incluyen fiebre, fatiga, dolor muscular, dolor de cabeza, náuseas y escalofríos. A medida que la enfermedad progresa, pueden aparecer dificultades respiratorias severas debido a la acumulación de líquido en los pulmones."
+        content: "Los síntomas del SPH suelen iniciar entre 1 y 8 semanas después de la exposición. Al principio pueden incluir fiebre, fatiga, dolor muscular, dolor de cabeza, mareo, escalofríos, náusea, vómito, diarrea o dolor abdominal.\n\nEntre 4 y 10 días después de la fase inicial pueden aparecer síntomas graves: tos, dificultad para respirar, opresión en el pecho y acumulación de líquido en los pulmones. Los CDC advierten que el SPH puede ser mortal, por lo que una persona con síntomas compatibles y posible exposición debe buscar atención médica de inmediato."
       },
       diagnosis: {
         title: "Diagnóstico",
-        content: "El diagnóstico del hantavirus debe ser realizado por profesionales de la salud mediante evaluación clínica y pruebas de laboratorio. Es importante considerar un historial de exposición a roedores o espacios contaminados.\n\nDado que los síntomas iniciales pueden confundirse con otras enfermedades respiratorias, el diagnóstico temprano es esencial para evitar complicaciones graves."
+        content: "El diagnóstico requiere evaluación clínica y pruebas de laboratorio. Los primeros síntomas pueden parecer influenza u otras infecciones respiratorias, por lo que la historia de exposición es clave. El paciente debe informar si tuvo contacto con roedores, limpió espacios contaminados, viajó a zonas afectadas o estuvo vinculado a un brote bajo monitoreo.\n\nLos CDC indican que diagnosticar la infección muy temprano puede ser difícil; si la primera prueba se realiza antes de que el virus sea detectable, puede requerirse repetir la prueba."
       },
       treatment: {
         title: "Tratamiento",
-        content: "Actualmente, no existe un tratamiento específico para eliminar el hantavirus. El tratamiento médico consiste principalmente en cuidados de soporte, monitoreo respiratorio, oxígeno y atención hospitalaria especializada en casos severos."
+        content: "No existe un antiviral específico que elimine la infección por hantavirus. El tratamiento es de soporte y depende de la gravedad. Los casos leves pueden requerir monitoreo, hidratación y control de síntomas, mientras que el SPH grave puede requerir oxígeno, intubación, cuidados intensivos y soporte respiratorio avanzado.\n\nComo la enfermedad grave puede empeorar rápido, el traslado temprano a un hospital con capacidad de urgencias y terapia intensiva mejora la probabilidad de supervivencia."
       },
       prevention: {
         title: "Prevención",
-        content: "Las medidas preventivas incluyen evitar el contacto con roedores, mantener limpios los espacios cerrados, usar desinfectantes durante la limpieza y almacenar alimentos en contenedores sellados. También se recomienda ventilar adecuadamente los espacios que han estado cerrados por períodos prolongados."
+        content: "La prevención más efectiva es evitar la exposición a roedores y polvo contaminado. Los CDC recomiendan controlar infestaciones, sellar agujeros y grietas, guardar alimentos de forma segura, retirar materiales que atraigan roedores y usar métodos de limpieza húmeda en lugar de barrer o aspirar en seco excrementos contaminados.\n\nAl limpiar áreas posiblemente contaminadas, se debe ventilar primero, usar protección adecuada, humedecer el material con desinfectante, evitar levantar polvo y desechar los residuos de forma segura."
       },
       cruisePrevention: {
-        title: "Medidas de Prevención en Cruceros",
+        title: "Medidas de prevención en barcos y espacios compartidos",
         items: [
-          "Inspeccionar áreas de almacenamiento y cocina.",
-          "Evitar la acumulación de basura.",
-          "Controlar la presencia de roedores.",
-          "Desinfectar superficies constantemente.",
-          "Ventilar espacios cerrados antes de limpiarlos.",
-          "Usar equipo de protección durante la limpieza.",
-          "Reportar síntomas respiratorios inmediatamente."
+          "Inspeccionar áreas de alimentos, basura, cabinas, cocinas y carga para detectar actividad de roedores.",
+          "Sellar puntos de entrada y retirar fuentes de alimento o agua que atraigan roedores.",
+          "Usar métodos de desinfección húmeda en excrementos, nidos y superficies contaminadas.",
+          "Evitar barrer o aspirar en seco zonas con posible contaminación por roedores.",
+          "Aislar casos sospechosos y evaluar rápido a personas con síntomas respiratorios.",
+          "Identificar contactos cercanos y seguir las indicaciones de monitoreo de salud pública.",
+          "Comunicar el riesgo con claridad sin exagerar el peligro para la población general."
         ]
       },
       conclusion: {
         title: "Conclusión",
-        content: "El brote de hantavirus relacionado con el crucero MV Hondius demostró la importancia de la vigilancia epidemiológica internacional y las medidas preventivas contra enfermedades zoonóticas. La detección temprana y el seguimiento médico apropiado son esenciales para reducir el riesgo de complicaciones graves."
+        content: "El brote del M/V Hondius muestra por qué las enfermedades zoonóticas requieren notificación rápida, coordinación internacional, confirmación de laboratorio y rastreo cuidadoso de contactos. El mensaje de salud pública debe ser equilibrado: el hantavirus puede ser grave y requiere atención médica urgente, pero el riesgo puede reducirse con control de roedores, limpieza segura, detección temprana y monitoreo basado en evidencia."
       }
     },
     timeline: {
-      title: "Cronología del Brote",
+      title: "Cronología del brote",
       events: [
-        { date: "1 de abril, 2026", text: "El crucero MV Hondius comenzó su viaje." },
-        { date: "2 de mayo, 2026", text: "La OMS fue notificada sobre casos sospechosos." },
-        { date: "4 de mayo, 2026", text: "Se reportaron casos severos relacionados con hantavirus." },
-        { date: "6 de mayo, 2026", text: "El virus Andes fue identificado como la causa del brote." },
-        { date: "Mayo 2026", text: "Se realizaron investigaciones epidemiológicas y seguimiento médico." }
+        { date: "Abril de 2026", text: "El viaje del M/V Hondius incluyó pasajeros y tripulación que después fueron vinculados con un grupo de casos de enfermedad respiratoria grave." },
+        { date: "2 de mayo de 2026", text: "La OMS fue notificada sobre enfermedad respiratoria aguda grave a bordo, incluidos fallecimientos y un pasajero crítico." },
+        { date: "8 de mayo de 2026", text: "Los CDC informaron que el gobierno de Estados Unidos estaba monitoreando y respondiendo al brote vinculado al M/V Hondius." },
+        { date: "17 de mayo de 2026", text: "La OMS publicó guía actualizada para manejar contactos de casos de virus Andes vinculados al barco." },
+        { date: "27 de mayo de 2026", text: "La OMS reportó 13 casos, incluidos tres fallecimientos; 11 fueron confirmados por laboratorio y dos fueron probables." },
+        { date: "28 de mayo de 2026", text: "La OMS evaluó el riesgo para la población mundial como bajo mientras continuaba el rastreo internacional de contactos." }
       ]
     },
     data: {
-      title: "Datos Clave",
-      headers: ["Dato", "Información"],
+      title: "Datos clave",
+      headers: ["Dato", "Información verificada"],
+      highlights: [
+        { value: "13", label: "Casos vinculados por OMS" },
+        { value: "3", label: "Fallecimientos reportados" },
+        { value: "600+", label: "Contactos rastreados" },
+        { value: "Bajo", label: "Riesgo público mundial" }
+      ],
       rows: [
-        ["Ubicación relacionada", "Crucero MV Hondius"],
-        ["Virus identificado", "Virus Andes"],
-        ["Personas a bordo", "147 pasajeros y tripulantes"],
-        ["Casos iniciales", "7 casos reportados"],
-        ["Importancia sanitaria", "Riesgo de enfermedad respiratoria severa"]
+        ["Evento", "Brote de hantavirus Andes vinculado a viaje en crucero M/V Hondius"],
+        ["Última actualización OMS usada", "Disease Outbreak News del 28 de mayo de 2026"],
+        ["Casos reportados por OMS", "13 casos al 27 de mayo de 2026: 11 confirmados y 2 probables"],
+        ["Fallecimientos reportados por OMS", "3 fallecimientos; letalidad reportada de 23%"],
+        ["Hallazgo de transmisión", "La evidencia actual apoya transmisión de persona a persona a bordo"],
+        ["Contactos rastreados", "Más de 600 contactos en 32 países, territorios y áreas al 22 de mayo de 2026"],
+        ["Riesgo para población general", "La OMS evaluó el riesgo mundial como bajo; los CDC describieron el riesgo para el público estadounidense como extremadamente bajo"]
       ]
     },
     faq: {
-      title: "Preguntas Frecuentes",
+      title: "Preguntas frecuentes",
       items: [
-        { q: "¿Qué es el hantavirus?", a: "El hantavirus es una enfermedad viral transmitida principalmente por roedores infectados. La infección ocurre al inhalar partículas contaminadas con saliva, orina o heces de roedores. Dependiendo del tipo de virus, puede afectar severamente los pulmones o los riñones." },
-        { q: "¿Puede el hantavirus transmitirse de persona a persona?", a: "La mayoría de los tipos de hantavirus no se transmiten entre personas. Sin embargo, el virus Andes ha mostrado casos raros de transmisión de persona a persona a través de contacto cercano prolongado." },
-        { q: "¿Cuáles son los primeros síntomas?", a: "Los primeros síntomas suelen parecerse a la gripe e incluyen fiebre, fatiga, dolor muscular, dolor de cabeza, náuseas y escalofríos. En casos severos, puede ocurrir dificultad para respirar." },
-        { q: "¿Cómo se puede prevenir?", a: "Para prevenir el hantavirus, es importante evitar el contacto con roedores, mantener limpios los espacios cerrados, almacenar adecuadamente los alimentos, ventilar las habitaciones antes de limpiarlas y usar desinfectantes apropiados." },
-        { q: "¿Existe tratamiento para el hantavirus?", a: "Actualmente, no existe un medicamento específico para eliminar el hantavirus. El tratamiento consiste principalmente en cuidados médicos de soporte, monitoreo respiratorio y hospitalización en casos severos." },
-        { q: "¿Por qué fue importante el brote del MV Hondius?", a: "El brote atrajo atención internacional porque involucró múltiples casos severos en un crucero con pasajeros de diferentes países. Además, el virus identificado fue el virus Andes, asociado con enfermedad respiratoria severa y posible transmisión de persona a persona." },
-        { q: "¿Quién tiene mayor riesgo de infección?", a: "Las personas con mayor riesgo son aquellas que trabajan o permanecen en lugares donde hay roedores presentes, como almacenes, graneros, barcos, espacios cerrados abandonados o áreas rurales contaminadas." }
+        { q: "¿El hantavirus siempre se transmite entre personas?", a: "No. La mayoría de los hantavirus se relacionan con exposición a roedores y no suelen transmitirse entre personas. El virus Andes es la excepción importante, con transmisión limitada documentada después de contacto cercano y prolongado." },
+        { q: "¿Por qué el virus Andes es diferente?", a: "El virus Andes es el único hantavirus actualmente conocido por transmitirse de persona a persona en brotes de SPH. La OMS señala que puede ocurrir por contacto cercano y que la transmisión en el brote del crucero aún se estudia." },
+        { q: "¿Qué tan grave es el SPH?", a: "El SPH puede agravarse rápido después de los síntomas iniciales. Los CDC reportan que puede causar tos, dificultad para respirar y líquido en los pulmones; los casos severos pueden requerir cuidados intensivos." },
+        { q: "¿La población general debe preocuparse?", a: "Para personas que no estuvieron en el barco ni tuvieron contacto cercano con un caso confirmado, la OMS evaluó el riesgo mundial como bajo y los CDC describieron el riesgo para el público estadounidense como extremadamente bajo." },
+        { q: "¿Qué debe hacer alguien con posible exposición?", a: "Debe seguir la guía de salud pública local, monitorear síntomas y buscar atención médica inmediata si aparecen fiebre, dolor muscular, tos o dificultad para respirar. Debe mencionar su exposición al personal médico." },
+        { q: "¿Qué forma de limpieza es más segura?", a: "Los CDC recomiendan evitar barrer o aspirar en seco áreas contaminadas por roedores. Se debe ventilar, humedecer el material contaminado con desinfectante y limpiar reduciendo el polvo contaminado." },
+        { q: "¿Existe cura?", a: "No existe un antiviral específico. El tratamiento es de soporte e incluye oxígeno, soporte respiratorio, cuidados intensivos y manejo de complicaciones cuando es necesario." }
       ]
     },
     images: {
-      title: "Imágenes Relacionadas",
-      caption1: "Figura 1. Representación visual del hantavirus y su impacto en la salud humana.",
-      caption2: "Figura 2. Síntomas relacionados con el hantavirus."
+      title: "Datos reales e imágenes de salud pública",
+      caption1: "Curva epidemiológica de la OMS de casos de virus Andes vinculados al M/V Hondius, reportados al 27 de mayo de 2026.",
+      caption2: "Tabla de rastreo de contactos de la OMS con regiones que reportaron contactos de alto y bajo riesgo durante la respuesta.",
+      caption3: "Imagen preventiva de los CDC: los productos de limpieza son clave para métodos húmedos seguros tras contaminación por roedores.",
+      caption4: "Infografía educativa relacionada con prevención del hantavirus y concientización pública.",
+      caption5: "Guía visual relacionada con síntomas comunes asociados a la enfermedad por hantavirus."
     },
     video: {
-      title: "Video Explicativo",
-      caption: "Figura 3. Video informativo sobre el hantavirus."
+      title: "Video explicativo",
+      caption: "Video informativo sobre prevención del hantavirus y respuesta sanitaria."
     },
     references: {
       title: "Referencias",
       items: [
-        "Centers for Disease Control and Prevention. (2026). 2026 multi-country hantavirus cluster linked to cruise ship. https://www.cdc.gov/han/php/notices/han00528.html",
-        "European Centre for Disease Prevention and Control. (2026). Hantavirus-associated cluster of illness on a cruise ship. https://www.ecdc.europa.eu/",
-        "World Health Organization. (2026). Hantavirus cluster linked to cruise ship travel, multi-country. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "World Health Organization. (2026). Hantavirus cluster linked to cruise ship travel, multi-country. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600"
+        "World Health Organization. (2026, May 28). Hantavirus outbreak linked to cruise ship travel, Multi-locations. https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
+        "Centers for Disease Control and Prevention. (2026, May 8). CDC Provides Update on Hantavirus Outbreak Linked to M/V Hondius Cruise Ship. https://www.cdc.gov/media/releases/2026/2026-cdc-provides-update-on-hantavirus-outbreak-linked-to-m-v-hondius-cruise-ship.html",
+        "Centers for Disease Control and Prevention. (2024). About Hantavirus. https://www.cdc.gov/hantavirus/about/index.html",
+        "Centers for Disease Control and Prevention. (2024). Hantavirus Prevention. https://www.cdc.gov/hantavirus/prevention/index.html"
       ]
     },
-    footer: "Hantavirus en el Mar — Proyecto de Investigación Académica © 2026",
+    footer: "Hantavirus en el mar - Proyecto de investigación académica 2026",
     theme: { light: "Claro", dark: "Oscuro" }
   }
 };

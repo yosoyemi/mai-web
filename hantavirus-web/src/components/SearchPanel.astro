@@ -1,0 +1,166 @@
+<section class="section reveal" id="search">
+  <div class="container">
+    <div class="search-shell card reveal">
+      <div class="search-heading">
+        <p class="eyebrow" data-en="Quick research" data-es="Búsqueda rápida">Quick research</p>
+        <h2 data-en="Search this page" data-es="Buscar en esta página">Search this page</h2>
+      </div>
+      <label class="search-box" for="siteSearch">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <input
+          id="siteSearch"
+          type="search"
+          data-placeholder-en="Search symptoms, transmission, prevention..."
+          data-placeholder-es="Busca síntomas, transmisión, prevención..."
+          placeholder="Search symptoms, transmission, prevention..."
+          autocomplete="off"
+        />
+      </label>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .search-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(260px, 1.25fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .search-heading h2 {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.15;
+    color: var(--color-primary);
+  }
+  [data-theme="dark"] .search-heading h2 { color: #fff; }
+  .eyebrow {
+    margin-bottom: 0.45rem;
+    color: var(--color-accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 3.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0 1rem;
+    background: var(--color-surface-alt);
+  }
+  .search-box svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  .search-box input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-text);
+    font: inherit;
+  }
+  .search-results {
+    grid-column: 2;
+    display: grid;
+    gap: 0.65rem;
+  }
+  .search-result {
+    display: block;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    color: var(--color-text);
+    background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  }
+  .search-result:hover {
+    text-decoration: none;
+    border-color: var(--color-accent);
+  }
+  .search-result strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.2rem;
+  }
+  [data-theme="dark"] .search-result strong { color: var(--color-accent); }
+  .search-result span {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  .search-empty {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+  }
+  @media (max-width: 760px) {
+    .search-shell { grid-template-columns: 1fr; }
+    .search-results { grid-column: auto; }
+  }
+</style>
+
+<script>
+  const input = document.getElementById('siteSearch') as HTMLInputElement;
+  const results = document.getElementById('searchResults');
+
+  const getLang = () => document.documentElement.getAttribute('data-lang') || localStorage.getItem('lang') || 'en';
+
+  const getSearchableSections = () => {
+    return Array.from(document.querySelectorAll('section[id]'))
+      .filter((section) => !['hero', 'search'].includes(section.id))
+      .map((section) => {
+        const title = section.querySelector('h2')?.textContent?.trim() || section.id;
+        const text = section.textContent?.replace(/\s+/g, ' ').trim() || '';
+        return { id: section.id, title, text };
+      });
+  };
+
+  const renderResults = () => {
+    if (!results) return;
+    const lang = getLang();
+    const query = input.value.trim().toLowerCase();
+    input.placeholder = lang === 'es'
+      ? input.dataset.placeholderEs || ''
+      : input.dataset.placeholderEn || '';
+
+    if (!query) {
+      results.innerHTML = `<p class="search-empty">${
+        lang === 'es'
+          ? 'Escribe una palabra para encontrar secciones relevantes.'
+          : 'Type a word to find relevant sections.'
+      }</p>`;
+      return;
+    }
+
+    const matches = getSearchableSections()
+      .filter((item) => item.text.toLowerCase().includes(query))
+      .slice(0, 6);
+
+    if (!matches.length) {
+      results.innerHTML = `<p class="search-empty">${
+        lang === 'es' ? 'No se encontraron resultados.' : 'No results found.'
+      }</p>`;
+      return;
+    }
+
+    results.innerHTML = matches.map((item) => `
+      <a class="search-result" href="#${item.id}">
+        <strong>${item.title}</strong>
+        <span>${item.text.slice(0, 150)}...</span>
+      </a>
+    `).join('');
+  };
+
+  input.addEventListener('input', renderResults);
+  window.addEventListener('langchange', renderResults);
+  renderResults();
+</script>

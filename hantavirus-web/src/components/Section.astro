@@ -1,0 +1,48 @@
+---
+interface Props {
+  id: string;
+  titleEn: string;
+  titleEs: string;
+  contentEn: string;
+  contentEs: string;
+  list?: string[];
+  listEs?: string[];
+}
+const { id, titleEn, titleEs, contentEn, contentEs, list, listEs } = Astro.props;
+---
+
+<section class="section" id={id}>
+  <div class="container">
+    <h2 class="section-title" data-en={titleEn} data-es={titleEs}>{titleEn}</h2>
+    <div class="card">
+      {contentEn && <p class="section-text" data-en={contentEn} data-es={contentEs}>{contentEn}</p>}
+      {list && (
+        <ul class="prevention-list" data-list-en={JSON.stringify(list)} data-list-es={JSON.stringify(listEs)}>
+          {list.map(item => <li>{item}</li>)}
+        </ul>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-text {
+    white-space: pre-line;
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+  .prevention-list {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .prevention-list li {
+    color: var(--color-text);
+    padding-left: 0.5rem;
+  }
+  .prevention-list li::marker {
+    content: "✓ ";
+    color: var(--color-accent);
+  }
+</style>

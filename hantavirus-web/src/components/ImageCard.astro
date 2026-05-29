@@ -1,0 +1,42 @@
+---
+import { translations } from '../data/translations.js';
+const en = translations.en.images;
+const es = translations.es.images;
+---
+
+<section class="section" id="media">
+  <div class="container">
+    <h2 class="section-title" data-en={en.title} data-es={es.title}>{en.title}</h2>
+    <div class="image-grid">
+      <figure class="card image-card">
+        <img src="https://ayacucho.gob.ar/sites/default/files/flyer-hanta-2019_1.jpg" alt="Hantavirus infographic" loading="lazy" />
+        <figcaption data-en={en.caption1} data-es={es.caption1}>{en.caption1}</figcaption>
+      </figure>
+      <figure class="card image-card">
+        <img src="http://www.generalrodriguez.gob.ar/noticias/wp-content/uploads/2019/01/50488631_1279554495532038_3515354994322702336_n.jpg" alt="Hantavirus symptoms" loading="lazy" />
+        <figcaption data-en={en.caption2} data-es={es.caption2}>{en.caption2}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .image-card { padding: 1rem; text-align: center; }
+  .image-card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 100%;
+    object-fit: cover;
+    max-height: 300px;
+  }
+  .image-card figcaption {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+</style>

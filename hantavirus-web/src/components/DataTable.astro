@@ -1,0 +1,49 @@
+---
+import { translations } from '../data/translations.js';
+const en = translations.en.data;
+const es = translations.es.data;
+---
+
+<section class="section" id="data">
+  <div class="container">
+    <h2 class="section-title" data-en={en.title} data-es={es.title}>{en.title}</h2>
+    <div class="table-wrapper card">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th data-en={en.headers[0]} data-es={es.headers[0]}>{en.headers[0]}</th>
+            <th data-en={en.headers[1]} data-es={es.headers[1]}>{en.headers[1]}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {en.rows.map((row, i) => (
+            <tr>
+              <td data-en={row[0]} data-es={es.rows[i][0]}>{row[0]}</td>
+              <td data-en={row[1]} data-es={es.rows[i][1]}>{row[1]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .table-wrapper { overflow-x: auto; padding: 1rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  th {
+    background: var(--color-surface-alt);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  [data-theme="dark"] th { color: var(--color-accent); }
+  tr:hover td { background: var(--color-surface-alt); }
+</style>

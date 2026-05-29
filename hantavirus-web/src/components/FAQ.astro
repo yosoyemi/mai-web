@@ -1,0 +1,41 @@
+---
+import { translations } from '../data/translations.js';
+const en = translations.en.faq;
+const es = translations.es.faq;
+---
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title" data-en={en.title} data-es={es.title}>{en.title}</h2>
+    <div class="faq-list">
+      {en.items.map((item, i) => (
+        <details class="faq-item card">
+          <summary data-en={item.q} data-es={es.items[i].q}>{item.q}</summary>
+          <p data-en={item.a} data-es={es.items[i].a}>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list { display: grid; gap: 1rem; }
+  .faq-item { cursor: pointer; }
+  .faq-item summary {
+    font-weight: 600;
+    padding: 0.5rem 0;
+    color: var(--color-primary);
+    list-style: none;
+  }
+  .faq-item summary::before {
+    content: '▸ ';
+    color: var(--color-accent);
+  }
+  .faq-item[open] summary::before { content: '▾ '; }
+  [data-theme="dark"] .faq-item summary { color: var(--color-accent); }
+  .faq-item p {
+    padding: 1rem 0 0.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+</style>

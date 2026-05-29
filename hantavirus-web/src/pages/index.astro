@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Timeline from '../components/Timeline.astro';
+import DataTable from '../components/DataTable.astro';
+import FAQ from '../components/FAQ.astro';
+import ImageCard from '../components/ImageCard.astro';
+import VideoSection from '../components/VideoSection.astro';
+import Footer from '../components/Footer.astro';
+import { translations } from '../data/translations.js';
+
+const en = translations.en.sections;
+const es = translations.es.sections;
+const refEn = translations.en.references;
+const refEs = translations.es.references;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Informative research about the hantavirus outbreak on the MV Hondius cruise ship during 2026. Academic project." />
+  <title>Hantavirus at Sea: The MV Hondius Cruise Ship Outbreak</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦠</text></svg>" />
+</head>
+<body>
+  <Header />
+  <Hero />
+
+  <Section id="introduction" titleEn={en.introduction.title} titleEs={es.introduction.title} contentEn={en.introduction.content} contentEs={es.introduction.content} />
+  <Section id="what" titleEn={en.what.title} titleEs={es.what.title} contentEn={en.what.content} contentEs={es.what.content} />
+  <Section id="background" titleEn={en.background.title} titleEs={es.background.title} contentEn={en.background.content} contentEs={es.background.content} />
+
+  <Timeline />
+  <DataTable />
+
+  <Section id="situation" titleEn={en.situation.title} titleEs={es.situation.title} contentEn={en.situation.content} contentEs={es.situation.content} />
+  <Section id="transmission" titleEn={en.transmission.title} titleEs={es.transmission.title} contentEn={en.transmission.content} contentEs={es.transmission.content} />
+  <Section id="symptoms" titleEn={en.symptoms.title} titleEs={es.symptoms.title} contentEn={en.symptoms.content} contentEs={es.symptoms.content} />
+  <Section id="diagnosis" titleEn={en.diagnosis.title} titleEs={es.diagnosis.title} contentEn={en.diagnosis.content} contentEs={es.diagnosis.content} />
+  <Section id="treatment" titleEn={en.treatment.title} titleEs={es.treatment.title} contentEn={en.treatment.content} contentEs={es.treatment.content} />
+  <Section id="prevention" titleEn={en.prevention.title} titleEs={es.prevention.title} contentEn={en.prevention.content} contentEs={es.prevention.content} />
+  <Section id="cruise-prevention" titleEn={en.cruisePrevention.title} titleEs={es.cruisePrevention.title} contentEn="" contentEs="" list={en.cruisePrevention.items} listEs={es.cruisePrevention.items} />
+
+  <FAQ />
+  <ImageCard />
+  <VideoSection />
+
+  <section class="section" id="conclusion">
+    <div class="container">
+      <h2 class="section-title" data-en={en.conclusion.title} data-es={es.conclusion.title}>{en.conclusion.title}</h2>
+      <div class="card">
+        <p data-en={en.conclusion.content} data-es={es.conclusion.content}>{en.conclusion.content}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="references">
+    <div class="container">
+      <h2 class="section-title" data-en={refEn.title} data-es={refEs.title}>{refEn.title}</h2>
+      <div class="card references-list">
+        {refEn.items.map((ref, i) => (
+          <p class="reference" data-en={ref} data-es={refEs.items[i]}>{ref}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <style>
+    .references-list { display: grid; gap: 1rem; }
+    .reference {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+      word-break: break-word;
+    }
+  </style>
+
+  <script>
+    // Global language change handler for all data-en/data-es elements
+    function applyLang(lang) {
+      document.querySelectorAll('[data-en][data-es]').forEach(el => {
+        const text = lang === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+        if (text) el.textContent = text;
+      });
+      // Handle lists
+      document.querySelectorAll('[data-list-en]').forEach(ul => {
+        const items = JSON.parse(lang === 'es' ? ul.getAttribute('data-list-es') : ul.getAttribute('data-list-en'));
+        const lis = ul.querySelectorAll('li');
+        lis.forEach((li, i) => { if (items[i]) li.textContent = items[i]; });
+      });
+    }
+
+    window.addEventListener('langchange', (e) => applyLang(e.detail));
+    const initLang = localStorage.getItem('lang') || 'en';
+    if (initLang === 'es') applyLang('es');
+  </script>
+</body>
+</html>

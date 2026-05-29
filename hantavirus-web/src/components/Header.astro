@@ -1,0 +1,135 @@
+---
+import { translations } from '../data/translations.js';
+const t = translations.en;
+---
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">🦠 Hantavirus</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#introduction">{t.nav.intro}</a>
+      <a href="#what">{t.nav.what}</a>
+      <a href="#timeline">{t.nav.timeline}</a>
+      <a href="#data">{t.nav.data}</a>
+      <a href="#situation">{t.nav.situation}</a>
+      <a href="#faq">{t.nav.faq}</a>
+      <a href="#references">{t.nav.references}</a>
+    </nav>
+    <div class="controls">
+      <button id="themeToggle" class="btn-control" aria-label="Toggle theme">🌙</button>
+      <button id="langToggle" class="btn-control" aria-label="Toggle language">ES</button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(10px);
+    transition: background var(--transition);
+  }
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    white-space: nowrap;
+  }
+  [data-theme="dark"] .logo { color: var(--color-accent); }
+  .nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+  }
+  .nav a {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+  }
+  .nav a:hover { color: var(--color-accent); text-decoration: none; }
+  .controls { display: flex; gap: 0.5rem; }
+  .btn-control {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    transition: all var(--transition);
+  }
+  .btn-control:hover { background: var(--color-accent); color: #fff; }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-surface);
+      flex-direction: column;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav.open { display: flex; }
+  }
+</style>
+
+<script>
+  // Theme toggle
+  const themeBtn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  themeBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+  themeBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+  });
+
+  // Language toggle
+  const langBtn = document.getElementById('langToggle');
+  const savedLang = localStorage.getItem('lang') || 'en';
+  document.documentElement.setAttribute('data-lang', savedLang);
+  langBtn.textContent = savedLang === 'en' ? 'ES' : 'EN';
+
+  langBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-lang') || 'en';
+    const next = current === 'en' ? 'es' : 'en';
+    document.documentElement.setAttribute('data-lang', next);
+    localStorage.setItem('lang', next);
+    langBtn.textContent = next === 'en' ? 'ES' : 'EN';
+    window.dispatchEvent(new CustomEvent('langchange', { detail: next }));
+  });
+
+  // Mobile menu
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>

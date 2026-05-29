@@ -1,0 +1,143 @@
+---
+import { translations } from '../data/translations.js';
+const en = translations.en.hero;
+const es = translations.es.hero;
+const authors = [
+  "Jesús Manuel López Villalpando",
+  "Jovani Alexander Flórez de Loera",
+  "Max Gonzáles Velasquez",
+  "Geovanny Guadalupe Alvarado Renovato",
+  "Esteban Loera Loera"
+];
+---
+
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-title" data-en={en.title} data-es={es.title}>{en.title}</h1>
+    <p class="hero-subtitle" data-en={en.subtitle} data-es={es.subtitle}>{en.subtitle}</p>
+    <div class="authors">
+      {authors.map(a => <span class="author">{a}</span>)}
+    </div>
+    <p class="institution" data-en={en.institution} data-es={es.institution}>{en.institution}</p>
+    <p class="date" data-en={en.date} data-es={es.date}>{en.date}</p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #heroCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+  }
+  .authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .author {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+  }
+  .institution, .date {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+  }
+</style>
+
+<script>
+  import * as THREE from 'three';
+
+  const canvas = document.getElementById('heroCanvas') as HTMLCanvasElement;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  scene.background = new THREE.Color('#0a1f15');
+
+  // Particles
+  const count = 800;
+  const geo = new THREE.BufferGeometry();
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 20;
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const mat = new THREE.PointsMaterial({ color: '#2d8a6e', size: 0.05, transparent: true, opacity: 0.8 });
+  const points = new THREE.Points(geo, mat);
+  scene.add(points);
+
+  // Virus-like sphere
+  const sphereGeo = new THREE.IcosahedronGeometry(1.5, 1);
+  const sphereMat = new THREE.MeshBasicMaterial({ color: '#12372a', wireframe: true, transparent: true, opacity: 0.4 });
+  const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+  scene.add(sphere);
+
+  camera.position.z = 5;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    points.rotation.y += 0.001;
+    points.rotation.x += 0.0005;
+    sphere.rotation.y += 0.003;
+    sphere.rotation.x += 0.001;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+
+  // Language reactivity
+  window.addEventListener('langchange', (e: any) => {
+    const lang = e.detail;
+    document.querySelectorAll('[data-en][data-es]').forEach(el => {
+      const text = lang === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+      if (text) el.textContent = text;
+    });
+  });
+
+  // Apply saved lang on load
+  const initLang = localStorage.getItem('lang') || 'en';
+  if (initLang === 'es') {
+    document.querySelectorAll('[data-en][data-es]').forEach(el => {
+      const text = el.getAttribute('data-es');
+      if (text) el.textContent = text;
+    });
+  }
+</script>

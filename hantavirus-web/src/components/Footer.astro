@@ -1,0 +1,22 @@
+---
+import { translations } from '../data/translations.js';
+const en = translations.en;
+const es = translations.es;
+---
+
+<footer class="footer">
+  <div class="container">
+    <p data-en={en.footer} data-es={es.footer}>{en.footer}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    background: var(--color-surface);
+  }
+</style>
